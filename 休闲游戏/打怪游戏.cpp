@@ -223,12 +223,12 @@ int main(){
 		if(e[1].q<100){
 			cout<<"金币不足!"<<endl;
 		}
-		if(w==1){
+		if(w==1&&e[1].q>=100){
 			e[1].q-=100;
 			e[1].mx+=20;
 			cout<<"使用完成!"<<endl;
 		}
-		else if(w==2){
+		else if(w==2&&e[1].q>=100){
 			e[1].mg+=10;
 			e[1].q-=100;
 			cout<<"使用完成!"<<endl;
