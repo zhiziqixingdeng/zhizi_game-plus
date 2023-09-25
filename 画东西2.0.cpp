@@ -12,15 +12,15 @@ struct zuo{
 char y[10][10],d;
 string str;
 int main(){
-	cout<<"»¶Ó­À´µ½»­¶«Î÷2.0"<<endl;
+	cout<<"æ¬¢è¿æ¥åˆ°ç”»ä¸œè¥¿2.0"<<endl;
 	sleep(1);
 	while(1==1){
-		cout<<"ÇëÊäÈëÄãÒª¸ÉÊ²Ã´"<<endl<<"1.»­¶«Î÷"<<endl<<"2.²éÕÒ×÷Æ·"<<endl<<"3.ÍË³ö"<<endl;
+		cout<<"è¯·è¾“å…¥ä½ è¦å¹²ä»€ä¹ˆ"<<endl<<"1.ç”»ä¸œè¥¿"<<endl<<"2.æŸ¥æ‰¾ä½œå“"<<endl<<"3.é€€å‡º"<<endl;
 		cin>>n;
 		if(n==1){
-			cout<<"ÇëÊäÈëĞèÒª¼¸x¼¸µÄ(Èç: 8 8,×î¸ß9):";
+			cout<<"è¯·è¾“å…¥éœ€è¦å‡ xå‡ çš„(å¦‚: 8 8,æœ€é«˜9):";
 			cin>>s[cnt].a>>s[cnt].b;
-			cout<<"½áÊøÊäÈë114 514¿ÉÒÔ½áÊøÅ¶"<<endl;
+			cout<<"ç»“æŸè¾“å…¥114 514å¯ä»¥ç»“æŸå“¦"<<endl;
 			sleep(1);
 			system("cls");
 			while(t!=114||f!=514){
@@ -35,34 +35,34 @@ int main(){
 					}
 					cout<<endl;
 				}
-				cout<<"ÇëÊäÈë¸ü¸ÄµÄ×ø±ê(Èç 4 4£©:";
+				cout<<"è¯·è¾“å…¥æ›´æ”¹çš„åæ ‡(å¦‚ 4 4ï¼‰:";
 				cin>>t>>f;
 				if(t==114&&f==514){
-					cout<<"½áÊøÁË"<<endl;
+					cout<<"ç»“æŸäº†"<<endl;
 					for(int i=1;i<=s[cnt].a;i++){
 						for(int j=1;j<=s[cnt].b;j++){
 							s[cnt].x[i][j]=y[i][j];
 						}
 					}
-					cout<<"ÇëÊäÈëÕâ¸ö×÷Æ·µÄÃû×Ö:";
+					cout<<"è¯·è¾“å…¥è¿™ä¸ªä½œå“çš„åå­—:";
 					cin>>s[cnt].name;
 					cnt++;
-					cout<<"ºÃµÄ"<<endl;
+					cout<<"å¥½çš„"<<endl;
 					sleep(1);
 					system("cls");
 					break;
 				}
 				else{
 					if(t>s[cnt].a||t<=0||f>s[cnt].b||f<=0){
-						cout<<"´íÎó"<<endl;
+						cout<<"é”™è¯¯"<<endl;
 						sleep(1);
 						system("cls");
 					}
 					else{
-						cout<<"ÇëÊäÈëĞèÒª¸ü¸ÄµÄ×Ö·û:";
+						cout<<"è¯·è¾“å…¥éœ€è¦æ›´æ”¹çš„å­—ç¬¦:";
 						cin>>d;
 						y[t][f]=d;
-						cout<<"Íê³É!"<<endl;
+						cout<<"å®Œæˆ!"<<endl;
 						sleep(0.1);
 						system("cls");
 					}
@@ -70,12 +70,12 @@ int main(){
 			} 
 		}
 		else if(n==2){
-			cout<<"ÇëÊäÈëÕâ·ù×÷Æ·µÄÃû×Ö:";
+			cout<<"è¯·è¾“å…¥è¿™å¹…ä½œå“çš„åå­—:";
 			cin>>str;
 			t=0;
 			for(int i=1;i<=cnt;i++){
 				if(str==s[i].name){
-					cout<<"ÕÒµ½×÷Æ·:";
+					cout<<"æ‰¾åˆ°ä½œå“:";
 					for(int i=1;i<=s[i].a;i++){
 						for(int j=1;j<=s[i].b;j++){
 							cout<<s[cnt].x[i][j]<<" ";
@@ -86,7 +86,7 @@ int main(){
 			system("pause");
 		}
 		else{
-			cout<<"ÔÙ¼û"<<endl;
+			cout<<"å†è§"<<endl;
 			sleep(1);
 			return 0;
 		}
