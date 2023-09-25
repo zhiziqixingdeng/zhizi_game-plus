@@ -2,56 +2,93 @@
 #include <cstdlib>
 #include <unistd.h>
 using namespace std;
-char x[6][6];
-int a,b,c,d,n,w;
-char y;
-string name;
+int n,w,t,f,cnt=1;
+struct zuo{
+	string name;
+	int a;
+	int b;
+	char x[10][10];
+}s[100];
+char y[10][10],d;
+string str;
 int main(){
-	cout<<"»¶Ó­À´µ½ÎŞÁÄµÄ×Ô¶¯»æ»­"<<endl;
+	cout<<"æ¬¢è¿æ¥åˆ°ç”»ä¸œè¥¿2.0"<<endl;
 	sleep(1);
-	cout<<"Ãû×Ö:";
-	cin>>name;
-	cout<<"»¶Ó­,"<<name<<"°¡"<<endl;
-	sleep(1);
-	system("cls");
 	while(1==1){
-		cout<<name<<"ÇëÎÊÄãÒª¸ÉÊ²Ã´"<<endl<<"1.¿ªÊ¼Ëæ»ú»æ»­"<<endl<<"2.ÍË³ö"<<endl;
+		cout<<"è¯·è¾“å…¥ä½ è¦å¹²ä»€ä¹ˆ"<<endl<<"1.ç”»ä¸œè¥¿"<<endl<<"2.æŸ¥æ‰¾ä½œå“"<<endl<<"3.é€€å‡º"<<endl;
 		cin>>n;
 		if(n==1){
-			cout<<"¿ªÊ¼ÁË"<<endl;
-			cout<<"ÇëÎÊĞèÒªËæ»úÍ¿Ñ»¼¸ÂÖ"<<endl;
-			cin>>a;
-			for(int i=1;i<=5;i++){
-				for(int j=1;j<=5;j++){
-					x[i][j]='0';
+			cout<<"è¯·è¾“å…¥éœ€è¦å‡ xå‡ çš„(å¦‚: 8 8,æœ€é«˜9):";
+			cin>>s[cnt].a>>s[cnt].b;
+			cout<<"ç»“æŸè¾“å…¥114 514å¯ä»¥ç»“æŸå“¦"<<endl;
+			sleep(1);
+			system("cls");
+			for(int i=1;i<=s[cnt].a;i++){
+					for(int j=1;j<=s[cnt].b;j++){
+						y[i][j]='a';
+					}
 				}
-			}
-			for(int i=1;i<=a;i++){
-				b=rand()%4+1;
-				c=rand()%4+1;
-				if(x[b][c]=='0'){
-					x[b][c]='1';
-				}
-				else{
-					x[b][c]='0';
-				}
-				for(int i=1;i<=5;i++){
-					for(int j=1;j<=5;j++){
-						cout<<x[i][j];
+			while(t!=114||f!=514){
+				for(int i=1;i<=s[cnt].a;i++){
+					for(int j=1;j<=s[cnt].b;j++){
+						cout<<y[i][j]<<" ";
 					}
 					cout<<endl;
 				}
-				sleep(1);
-				system("cls");
-			}
+				cout<<"è¯·è¾“å…¥æ›´æ”¹çš„åæ ‡(å¦‚ 4 4ï¼‰:";
+				cin>>t>>f;
+				if(t==114&&f==514){
+					cout<<"ç»“æŸäº†"<<endl;
+					for(int i=1;i<=s[cnt].a;i++){
+						for(int j=1;j<=s[cnt].b;j++){
+							s[cnt].x[i][j]=y[i][j];
+						}
+					}
+					cout<<"è¯·è¾“å…¥è¿™ä¸ªä½œå“çš„åå­—:";
+					cin>>s[cnt].name;
+					cnt++;
+					cout<<"å¥½çš„"<<endl;
+					sleep(1);
+					system("cls");
+					break;
+				}
+				else{
+					if(t>s[cnt].a||t<=0||f>s[cnt].b||f<=0){
+						cout<<"é”™è¯¯"<<endl;
+						sleep(1);
+						system("cls");
+					}
+					else{
+						cout<<"è¯·è¾“å…¥éœ€è¦æ›´æ”¹çš„å­—ç¬¦:";
+						cin>>d;
+						y[t][f]=d;
+						cout<<"å®Œæˆ!"<<endl;
+						sleep(0.1);
+						system("cls");
+					}
+				}
+			} 
 		}
 		else if(n==2){
-			cout<<"¸ĞĞ»ÓÎÍæ"<<endl;
-			sleep(1);
-			return 0;
+			cout<<"è¯·è¾“å…¥è¿™å¹…ä½œå“çš„åå­—:";
+			cin>>str;
+			t=0;
+			for(int i=1;i<=cnt;i++){
+				if(str==s[i].name){
+					cout<<"æ‰¾åˆ°ä½œå“:";
+					for(int i=1;i<=s[i].a;i++){
+						for(int j=1;j<=s[i].b;j++){
+							cout<<s[cnt].x[i][j]<<" ";
+						}
+					}
+				}
+			}
+			system("pause");
 		}
 		else{
-			cout<<"´íÎó"<<endl;
+			cout<<"å†è§"<<endl;
+			sleep(1);
+			return 0;
 		}
 	}
 } 
