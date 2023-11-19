@@ -29,15 +29,15 @@ bool xz2(){
 }
 int main(){
 	srand((unsigned int)time(NULL)); 
-	cout<<"»¶Ó­À´µ½ÔËÆøÕ½¶·ÓÎÏ·"<<endl;
+	cout<<"æ¬¢è¿Žæ¥åˆ°è¿æ°”æˆ˜æ–—æ¸¸æˆ"<<endl;
 	sleep(1);
-	cout<<"Ãû×Ö:";
+	cout<<"åå­—:";
 	cin>>name;
-	cout<<"»¶Ó­"<<name<<"£¡"<<endl;
+	cout<<"æ¬¢è¿Ž"<<name<<"ï¼"<<endl;
 	sleep(1);
 	system("cls");
 	while(1==1){
-		cout<<name<<"ÓÐºÎ¹ó¸É"<<endl<<"1.Õ½¶·"<<endl<<"2.¸öÈËÐÅÏ¢"<<endl<<"3.ÍË³ö"<<endl;
+		cout<<name<<"æœ‰ä½•è´µå¹²"<<endl<<"1.æˆ˜æ–—"<<endl<<"2.ä¸ªäººä¿¡æ¯"<<endl<<"3.é€€å‡º"<<endl;
 		cin>>n;
 		if(n==1){
 			for(int i=1;i<=9;i++){
@@ -45,24 +45,24 @@ int main(){
 					x[i][j]=' '; 
 				}
 			}
-			cout<<"ÇëÊäÈëÄãµÄ³õÊ¼Î»ÖÃ"<<endl;
+			cout<<"è¯·è¾“å…¥ä½ çš„åˆå§‹ä½ç½®"<<endl;
 			sleep(1);
 			system("cls");
-			cout<<"1~9£¬Èç:6 7£¬ÇëÊäÈë:";
+			cout<<"1~9ï¼Œå¦‚:6 7ï¼Œè¯·è¾“å…¥:";
 			cin>>a>>b;
 			if(a>9||a<1||b>9||b<0){
-				cout<<"´íÎó"<<endl;
+				cout<<"é”™è¯¯"<<endl;
 				a=rand()%7+1;
 				b=rand()%7+1;
 			}
 			x[a][b]='w';
-			cout<<"¿ªÊ¼ÓÎÏ·!"<<endl;
+			cout<<"å¼€å§‹æ¸¸æˆ!"<<endl;
 			sleep(1);
 			system("cls");
 			t=rand()%7+1;
 			f=rand()%7+1;
 			x[t][f]='d';
-			cout<<"Ä¿±ê:dÊÇµÐÈË£¬wÊÇ×Ô¼º,ÒªÓÃwasdÀ´ÒÆ¶¯Åöµ½µÐÈË"<<endl; 
+			cout<<"ç›®æ ‡:dæ˜¯æ•Œäººï¼Œwæ˜¯è‡ªå·±,è¦ç”¨wasdæ¥ç§»åŠ¨ç¢°åˆ°æ•Œäºº"<<endl; 
 			sleep(1);
 			system("cls");
 			while(1==1){
@@ -70,12 +70,13 @@ int main(){
 					for(int j=1;j<=9;j++){
 						cout<<x[i][j];
 					}
+					cout<<endl;
 				}
-				cout<<"ÇëÊäÈëwsda:";
+				cout<<"è¯·è¾“å…¥wsda:";
 				cin>>y;
 				if(y=='w'){
 					if(a==1){
-						cout<<"ÄãÒÑ¾­ÔÚ×î¶¥ÉÏÁË°¡"<<endl;
+						cout<<"ä½ å·²ç»åœ¨æœ€é¡¶ä¸Šäº†å•Š"<<endl;
 					}
 					else{
 						x[a][b]=' ';
@@ -85,7 +86,7 @@ int main(){
 				}
 				else if(y=='s'){
 					if(a==9){
-						cout<<"ÄãÔÚ×îµ×ÏÂ!"<<endl;
+						cout<<"ä½ åœ¨æœ€åº•ä¸‹!"<<endl;
 					}
 					else{
 						x[a][b]=' ';
@@ -95,7 +96,7 @@ int main(){
 				}
 				else if(y=='a'){
 					if(b==1){
-						cout<<"ÄãÔÚ×î×ó±ß"<<endl;
+						cout<<"ä½ åœ¨æœ€å·¦è¾¹"<<endl;
 					}
 					else{
 						x[a][b]=' ';
@@ -105,7 +106,7 @@ int main(){
 				}
 				else if(y=='d'){
 					if(b==9){
-						cout<<"ÄãÔÚ×îÓÒ±ß"<<endl;
+						cout<<"ä½ åœ¨æœ€å³è¾¹"<<endl;
 					}
 					else{
 						x[a][b]=' ';
@@ -114,13 +115,13 @@ int main(){
 					}
 				}
 				else{
-					cout<<"´íÎó"<<endl;
+					cout<<"é”™è¯¯"<<endl;
 				}
 				sleep(1);
 				system("cls");
 				o=xz();
 				if(o==true){
-					cout<<"ÄãÓ®ÁË!"<<endl;
+					cout<<"ä½ èµ¢äº†!"<<endl;
 					sleep(1);
 					cnt++;
 					system("cls");
@@ -140,7 +141,7 @@ int main(){
 					system("cls");
 					o=xz2;
 					if(o==true){
-						cout<<"ÄãÊäÁË"<<endl;
+						cout<<"ä½ è¾“äº†"<<endl;
 						sleep(1);
 						system("cls");
 						break;
@@ -156,17 +157,17 @@ int main(){
 			}
 		}
 		else if(n==2){
-			cout<<"Ãû×Ö:"<<name<<endl;
-			cout<<"Ó®¹ýµÄ´ÎÊý:"<<cnt<<endl;
+			cout<<"åå­—:"<<name<<endl;
+			cout<<"èµ¢è¿‡çš„æ¬¡æ•°:"<<cnt<<endl;
 			system("pause");
 		}
 		else if(n==3){
-			cout<<"¸ÐÐ»ÓÎÍæ"<<endl;
+			cout<<"æ„Ÿè°¢æ¸¸çŽ©"<<endl;
 			sleep(1);
 			return 0;
 		} 
 		else{
-			cout<<"´íÎó"<<endl;
+			cout<<"é”™è¯¯"<<endl;
 			sleep(1);
 			system("cls");
 		}
